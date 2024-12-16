@@ -1,0 +1,12 @@
+1. Write program for Regular expression a*bb
+Test Cases: 
+	null
+	bbbb
+	aaa
+	baabb
+	aaabbb
+	baaabb
+	aaaab
+	abbabb
+	abb
+	aaaaabb

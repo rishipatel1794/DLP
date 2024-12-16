@@ -21,6 +21,10 @@ int main(){
     printf("Enter the size of word:");
     scanf("%d",&n);
     char word[n];
+    if(n==0){
+        printf("Invalid String");
+        return 0;
+    }
     printf("Enter the word:");
     scanf("%s",&word);
     if(checkWord(n,word)){
