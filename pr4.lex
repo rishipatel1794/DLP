@@ -1,3 +1,4 @@
+/* Objective 1
 %{
 #include <stdio.h>
 %}
@@ -18,3 +19,7 @@ int main() {
 int yywrap() {
     return 1;  // Indicates the end of input
 }
+*/
+
+
+// Objective 2
