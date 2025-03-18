@@ -5,7 +5,7 @@
 
 int char_count = 0, word_count = 0, line_count = 0;
 int whitespace_count = 0, tab_count = 0, special_char_count = 0;
-int identifier_count = 0, keyword_count = 0, value_count = 0;
+int identifier_count = 0, keyword_count = 0, value_count = 0, literal = 0;
 
 // List of C language keywords
 char *keywords[] = {"int", "float", "char", "double", "return", "if", "else", "while", "for", "do", 
@@ -34,7 +34,9 @@ int is_keyword(char *word) {
 
 
 " "             {  whitespace_count++; }
+"\'\'"            { literal++;}
 "\t"            {  whitespace_count++; tab_count++; }
+
 
 
 [0-9]+(\.[0-9]+)? { char_count += yyleng; value_count++; word_count++; printf("character:%s\n",yytext);}
@@ -82,6 +84,7 @@ int main(int argc, char *argv[]) {
     printf("Identifier Count: %d\n", identifier_count);
     printf("Keyword Count: %d\n", keyword_count);
     printf("Value Count: %d\n", value_count);
+    printf("Literal Count: %d\n", literal);
 
     return 0;
 }
